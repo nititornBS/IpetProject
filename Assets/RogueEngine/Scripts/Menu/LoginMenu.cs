@@ -13,7 +13,6 @@ namespace RogueEngine.UI
     {
         [Header("Login")]
         public UIPanel login_panel;
-         public string test = "test";
         public InputField login_user;
         public InputField login_pass;
         public Button login_button;

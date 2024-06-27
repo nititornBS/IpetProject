@@ -9,7 +9,7 @@ namespace RogueEngine
     public class BehaviorBoss : BehaviorData
     {
         public CardData summon_card;
-        public String text = "hello";
+
         public CardData ultimate_card;
         public TraitData phase_trait;
 

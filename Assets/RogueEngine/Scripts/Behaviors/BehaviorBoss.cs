@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ namespace RogueEngine
     public class BehaviorBoss : BehaviorData
     {
         public CardData summon_card;
+        public String text = "hello";
         public CardData ultimate_card;
         public TraitData phase_trait;
 

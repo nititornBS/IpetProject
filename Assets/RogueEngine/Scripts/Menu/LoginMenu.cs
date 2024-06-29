@@ -61,7 +61,7 @@ namespace RogueEngine.UI
             bool success = await Authenticator.Get().RefreshLogin();
             if (success)
             {
-                SceneNav.GoToMenu();
+                SceneNav.GoToIpetHomePage();
             }
             else
             {

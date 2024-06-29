@@ -107,7 +107,7 @@ namespace RogueEngine.UI
             GameClient.connect_settings.server_url = "";
             GameClient.connect_settings.game_uid = game_uid;
             GameClient.connect_settings.filename = filename;
-            if (type.ToString() == "1")
+            if (type == GameType.Ipet)
             {
                 StartIpet();
             }

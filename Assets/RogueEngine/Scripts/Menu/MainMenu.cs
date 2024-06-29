@@ -87,14 +87,15 @@ namespace RogueEngine.UI
             if (loader.activeSelf != matchmaking)
                 loader.SetActive(matchmaking);
             bool loading = LobbyClient.Get().IsLoading();
-            if(MenuLoadPanel.Get().IsVisible() != loading)
+            if (MenuLoadPanel.Get().IsVisible() != loading)
                 MenuLoadPanel.Get().SetVisible(loading);
         }
 
         public void CreateGame(GameType type)
         {
             string user_id = Authenticator.Get().UserID;
-            string file = user_id + "_" + (type == GameType.MultiHost ? "lan": "solo");
+            string file = user_id + "_" + (type == GameType.MultiHost ? "lan" : "solo");
+
             CreateGame(type, file, GameTool.GenerateRandomID());
         }
 
@@ -106,8 +107,16 @@ namespace RogueEngine.UI
             GameClient.connect_settings.server_url = "";
             GameClient.connect_settings.game_uid = game_uid;
             GameClient.connect_settings.filename = filename;
-            StartGame(); 
+            if (type.ToString() == "Ipet")
+            {
+                StartIpet();
+            }
+            else
+            {
+                StartGame();
+            }
         }
+
 
         public void LoadGame(GameType type, string filename)
         {
@@ -145,6 +154,17 @@ namespace RogueEngine.UI
                 StartCoroutine(FadeToGame());
             }
         }
+        public void StartIpet()
+        {
+            if (!starting)
+            {
+                starting = true;
+                LobbyClient.Get().Disconnect();
+                StartCoroutine(FadeToIpet()); // No changes needed here, just ensure it's using the updated coroutine
+            }
+            
+        }
+
 
         public void StartMathmaking(string group)
         {
@@ -155,6 +175,10 @@ namespace RogueEngine.UI
         public void OnClickSoloNew()
         {
             CreateGame(GameType.Solo);
+        }
+        public void OnClickIpet()
+        {
+            CreateGame(GameType.Ipet);
         }
 
         public void OnClickSoloLoad()
@@ -195,6 +219,14 @@ namespace RogueEngine.UI
             yield return new WaitForSeconds(1f);
             SceneNav.GoToSetup();
         }
+        private IEnumerator FadeToIpet()
+        {
+            BlackPanel.Get().Show();
+            AudioTool.Get().FadeOutMusic("music");
+            yield return new WaitForSeconds(1f);
+            SceneNav.GoToIpetHomePage(); // Change this line to load the "HomePage" scene
+        }
+
 
         public void OnClickLogout()
         {

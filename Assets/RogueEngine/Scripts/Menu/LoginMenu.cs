@@ -8,11 +8,12 @@ namespace RogueEngine.UI
     /// <summary>
     /// Main script for the login menu scene
     /// </summary>
-
+    
     public class LoginMenu : MonoBehaviour
     {
         [Header("Login")]
         public UIPanel login_panel;
+        public string test = "test";
         public InputField login_user;
         public InputField login_pass;
         public Button login_button;
@@ -61,7 +62,7 @@ namespace RogueEngine.UI
             bool success = await Authenticator.Get().RefreshLogin();
             if (success)
             {
-                SceneNav.GoToMenu();
+                SceneNav.GoToIpetHomePage();
             }
             else
             {

@@ -44,6 +44,10 @@ namespace RogueEngine
         {
             SceneManager.LoadScene("Map");
         }
+        public static void GoToIpetHomePage()
+        {
+            SceneManager.LoadScene("HomePage");
+        }
 
         public static string GetCurrentScene()
         {

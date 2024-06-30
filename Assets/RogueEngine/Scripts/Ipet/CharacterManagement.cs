@@ -5,24 +5,14 @@ using UnityEngine;
 public class CharacterManagement : MonoBehaviour
 {
     private List<Character_IPet> characters = new List<Character_IPet>();
-    private Bird bird; // Declare bird variable
+    private Bird bird;
 
     void Start()
     {
-        // Create a Bird character
+        // Create and initialize a Bird character
         bird = CreateCharacter<Bird>();
-        bird.SetName("Tweety");
-        bird.SetSpecies("Canary");
-        bird.SetGender("Female");
-        bird.SetHealth(100);
-        bird.SetHunger(50);
-        bird.SetHappiness(80);
-        bird.SetEnergy(90);
-        bird.SetOwner("Alice");
+        bird.InitializeCharacter("Tweety", "Canary", "Female", 100, 50, 80, 90, "Alice");
 
-        // Example interaction with the bird
-        Speak();
-        FeedIpet();
         Debug.Log("Bird's Hunger after feeding: " + bird.GetHunger());
     }
 

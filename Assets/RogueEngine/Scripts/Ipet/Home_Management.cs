@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Home_Management : MonoBehaviour
 {
     public GameObject Hunger_num;
+    public GameObject Energy_num;
+    public GameObject Name_pet;
     private Bird bird; 
 
  
@@ -19,16 +21,19 @@ public class Home_Management : MonoBehaviour
             return;
         }
 
-
+        SetPetName();   
         UpdateHungerDisplay();
+        UpdateEnergyDisplay();
         StartCoroutine(DecreaseHungerRoutine());
+        StartCoroutine(DecreaseEnergyRoutine());
+
     }
 
    
     void Update()
     {
-        
-      
+
+        UpdateEnergyDisplay();
         UpdateHungerDisplay();
     }
 
@@ -38,6 +43,23 @@ public class Home_Management : MonoBehaviour
         {
            
             Hunger_num.GetComponent<Text>().text = bird.GetHunger().ToString();
+        }
+    }
+    void UpdateEnergyDisplay()
+    {
+        if (bird != null && Hunger_num != null)
+        {
+
+            Energy_num.GetComponent<Text>().text = bird.GetEnergy().ToString();
+        }
+    }
+    
+    void SetPetName()
+    {
+        if (bird != null && Name_pet != null)
+        {
+
+            Name_pet.GetComponent<Text>().text = bird.GetName().ToString();
         }
     }
     private IEnumerator DecreaseHungerRoutine()
@@ -52,6 +74,19 @@ public class Home_Management : MonoBehaviour
             }
         }
     }
+    private IEnumerator DecreaseEnergyRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(10f);
+            if (bird != null)
+            {
+                bird.SetEnergy(bird.GetEnergy() - 5);
+                UpdateEnergyDisplay(); 
+            }
+        }
+    }
+ 
 
   
     public void IncreaseHunger()

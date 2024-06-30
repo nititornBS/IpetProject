@@ -13,7 +13,7 @@ public class CharacterManagement : MonoBehaviour
         bird = CreateCharacter<Bird>();
         bird.InitializeCharacter("Tweety", "Canary", "Female", 100, 50, 80, 90, "Alice");
 
-        Debug.Log("Bird's Hunger after feeding: " + bird.GetHunger());
+     
     }
 
     public void Speak()

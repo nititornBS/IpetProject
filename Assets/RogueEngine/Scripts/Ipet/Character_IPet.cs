@@ -15,10 +15,10 @@ public class Character_IPet : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(DecreaseHungerRoutine());
-        StartCoroutine(DecreaseEnergyRoutine());
+       
     }
 
+    // Update is called once per frame
     void Update()
     {
 
@@ -57,7 +57,6 @@ public class Character_IPet : MonoBehaviour
     public void SetHealth(int value)
     {
         health = value;
-        CheckHealthEffects();
     }
 
     public int GetHealth()
@@ -67,8 +66,7 @@ public class Character_IPet : MonoBehaviour
 
     public void SetHunger(int value)
     {
-        hunger = Mathf.Clamp(value, 0, 100);
-        CheckHungerEffects();
+        hunger = value;
     }
 
     public int GetHunger()
@@ -79,7 +77,6 @@ public class Character_IPet : MonoBehaviour
     public void SetHappiness(int value)
     {
         happiness = Mathf.Clamp(value, 0, 100);
-        CheckMoodEffects();
     }
 
     public int GetHappiness()
@@ -89,8 +86,7 @@ public class Character_IPet : MonoBehaviour
 
     public void SetEnergy(int value)
     {
-        energy = Mathf.Clamp(value, 0, 100);
-        CheckEnergyEffects();
+        energy = value;
     }
 
     public int GetEnergy()
@@ -108,68 +104,5 @@ public class Character_IPet : MonoBehaviour
         return owner;
     }
 
-    void CheckMoodEffects()
-    {
-        if (happiness < 30)
-        {
-            // Apply sad effects
-        }
-        else if (happiness > 60)
-        {
-            // Apply happy effects
-        }
-        // Apply boredom effects if needed
-    }
-
-    void CheckHungerEffects()
-    {
-        if (hunger < 20)
-        {
-            // Apply very hungry effects
-        }
-        else if (hunger > 70)
-        {
-            // Apply full effects
-        }
-        // Apply foodie trait effects if needed
-    }
-
-    void CheckEnergyEffects()
-    {
-        if (energy < 20)
-        {
-            // Apply very tired effects
-        }
-        else if (energy < 40)
-        {
-            // Apply tired effects
-        }
-    }
-
-    void CheckHealthEffects()
-    {
-        if (health < 15)
-        {
-            // Apply critical health effects
-        }
-        // Apply sickness effects if needed
-    }
-
-    private IEnumerator DecreaseHungerRoutine()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(5f);
-            SetHunger(GetHunger() - 1);
-        }
-    }
-
-    private IEnumerator DecreaseEnergyRoutine()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(10f);
-            SetEnergy(GetEnergy() - 1);
-        }
-    }
+    
 }

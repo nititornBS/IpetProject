@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,9 +38,8 @@ public class Bird : Character_IPet
     {
         SetHunger(GetHunger() + 5);
     }
+ 
+  
 
-    public void GetHungerPet()
-    {
-        GetHunger();
-    }
+ 
 }

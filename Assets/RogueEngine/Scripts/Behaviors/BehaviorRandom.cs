@@ -17,7 +17,9 @@ namespace RogueEngine
             return GetRandomCharacter(data, character, characters, turn);
         }
 
+
         public override Card SelectCardTarget(Battle data, BattleCharacter character, Card card, List<Card> cards, int turn)
+
         {
             return GetRandomCard(data, character, cards, turn);
         }

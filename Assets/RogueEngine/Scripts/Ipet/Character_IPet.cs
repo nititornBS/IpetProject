@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace RogueEngine
+{
+[CreateAssetMenu (fileName = "CreatePet" , menuName = "TcgEngine/Pet/CreatePet" ,  order = 1)]
 public class Character_IPet : MonoBehaviour
 {
     private string Name;
@@ -12,7 +15,8 @@ public class Character_IPet : MonoBehaviour
     private int happiness;
     private int energy;
     private string owner;
-
+    private string trait;
+    private bool isDead = false;
     void Start()
     {
         StartCoroutine(DecreaseHungerRoutine());
@@ -44,6 +48,14 @@ public class Character_IPet : MonoBehaviour
         return species;
     }
 
+    public void SetTrait(string value)
+    {
+        trait = value;
+    }
+    public string GetTrait()
+    {
+        return trait;
+    }
     public void SetGender(string value)
     {
         gender = value;
@@ -112,4 +124,5 @@ public class Character_IPet : MonoBehaviour
             SetHunger(hunger - 1);
         }
     }
+}
 }

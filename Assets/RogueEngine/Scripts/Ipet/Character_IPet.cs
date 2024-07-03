@@ -5,7 +5,7 @@ using UnityEngine;
 namespace RogueEngine
 {
 [CreateAssetMenu (fileName = "CreatePet" , menuName = "TcgEngine/Pet/CreatePet" ,  order = 1)]
-public class Character_IPet : MonoBehaviour
+public class Character_IPet : ScriptableObject
 {
     private string Name;
     private string species;

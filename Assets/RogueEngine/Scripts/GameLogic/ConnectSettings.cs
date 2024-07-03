@@ -11,7 +11,7 @@ namespace RogueEngine
         Solo = 0,
         MultiHost = 10,     //Server Host
         MultiJoin = 20,     //Join Game
-        Ipet = 0
+        Ipet = 1
     }
 
     [System.Serializable]

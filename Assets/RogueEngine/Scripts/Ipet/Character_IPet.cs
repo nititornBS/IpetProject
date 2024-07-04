@@ -15,7 +15,7 @@ public class Character_IPet : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(DecreaseHungerRoutine());
+       
     }
 
     // Update is called once per frame
@@ -104,12 +104,5 @@ public class Character_IPet : MonoBehaviour
         return owner;
     }
 
-    private IEnumerator DecreaseHungerRoutine()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(5f);
-            SetHunger(hunger - 1);
-        }
-    }
+    
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Bird : Character_IPet
 {
-   
+
 
     void Start()
     {
@@ -37,9 +37,10 @@ public class Bird : Character_IPet
     public void FeedIpet()
     {
         SetHunger(GetHunger() + 5);
-    }
- 
-  
 
- 
+    }
+
+
+
+
 }

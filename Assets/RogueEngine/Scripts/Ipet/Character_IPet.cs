@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Character_IPet : MonoBehaviour
+
 {
+    private string ID;
     private string Name;
     private string species;
     private string gender;
@@ -13,17 +16,6 @@ public class Character_IPet : MonoBehaviour
     private int energy;
     private string owner;
 
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void SetName(string value)
     {
         Name = value;
@@ -32,6 +24,15 @@ public class Character_IPet : MonoBehaviour
     public string GetName()
     {
         return Name;
+    }
+    public void SetID(string value)
+    {
+        ID = value;
+    }
+
+    public string GetID()
+    {
+        return ID;
     }
 
     public void SetSpecies(string value)
@@ -104,5 +105,5 @@ public class Character_IPet : MonoBehaviour
         return owner;
     }
 
-    
+
 }

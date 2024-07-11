@@ -1,30 +1,40 @@
-using System.Collections;
 using System.Collections.Generic;
+
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CharacterManagement : MonoBehaviour
 {
+    public string ID = "1";
+    public string Name = "Tweety";
+    public string species = "Canary";
+    public string gender = "Female";
+    public int health = 100;
+    public int hunger = 50;
+    public int happiness = 90;
+    public int energy = 80;
+    public string owner = "Alice";
     private List<Character_IPet> characters = new List<Character_IPet>();
     private Bird bird;
 
     void Start()
     {
-        // Create and initialize a Bird character
         bird = CreateCharacter<Bird>();
-        bird.InitializeCharacter("Tweety", "Canary", "Female", 100, 50, 80, 90, "Alice");
+        bird.InitializeCharacter(Name, species, gender, health, hunger, happiness, energy, owner);
 
-     
+
+
+
+
     }
+
 
     public void Speak()
     {
         bird.SayJibJib();
     }
 
-    public void FeedIpet()
-    {
-        bird.FeedIpet();
-    }
+
 
     public T CreateCharacter<T>() where T : Character_IPet
     {

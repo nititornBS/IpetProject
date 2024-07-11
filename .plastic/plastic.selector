@@ -1,4 +1,0 @@
-repository "Ipet@ManuKhalikov@cloud"
-  path "/"
-    br "/main"
-    co "/main"

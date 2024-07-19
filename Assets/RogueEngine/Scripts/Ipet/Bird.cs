@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+namespace RogueEngine
+{
 
 public class Bird : Character_IPet
 {
@@ -42,4 +44,5 @@ public class Bird : Character_IPet
   
 
  
+}
 }

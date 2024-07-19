@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+namespace RogueEngine
+{
+
 
 public class Home_Management : MonoBehaviour
 {
@@ -97,4 +100,5 @@ public class Home_Management : MonoBehaviour
             UpdateHungerDisplay();
         }
     }
+}
 }

@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
+namespace RogueEngine
+{
 public class CharacterManagement : MonoBehaviour
 {
-    private List<Character_IPet> characters = new List<Character_IPet>();
+    private List<ScriptableObject> characters = new List<ScriptableObject>();
     private Bird bird;
 
     void Start()
@@ -26,11 +28,13 @@ public class CharacterManagement : MonoBehaviour
         bird.FeedIpet();
     }
 
-    public T CreateCharacter<T>() where T : Character_IPet
+    public T CreateCharacter<T>() where T : ScriptableObject 
     {
         GameObject characterObject = new GameObject(typeof(T).Name);
-        T character = characterObject.AddComponent<T>();
+        T character = ScriptableObject.CreateInstance<T>();
         characters.Add(character);
         return character;
     }
+}
+
 }

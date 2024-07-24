@@ -25,7 +25,7 @@ public class CharacterManagement : MonoBehaviour
 
     public void FeedIpet()
     {
-        bird.FeedIpet();
+        bird.EatFood();
     }
 
     public T CreateCharacter<T>() where T : ScriptableObject 

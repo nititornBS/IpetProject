@@ -7,7 +7,7 @@ using Unity.Netcode;
 
 namespace RogueEngine
 {
-[CreateAssetMenu(fileName = "mood", menuName = "TcgEngine/Behaviors/Mood", order = 20)]
+[CreateAssetMenu(fileName = "mood", menuName = "TcgEngine/Behaviors/Mood")]
 public class Mood : ScriptableObject
 {
     private bool isAngry;

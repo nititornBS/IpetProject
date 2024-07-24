@@ -8,7 +8,7 @@ namespace RogueEngine
     /// Condition that check if character is alive
     /// </summary>
     
-    [CreateAssetMenu(fileName = "condition", menuName = "TcgEngine/Condition/Alive", order = 10)]
+    [CreateAssetMenu(fileName = "condition", menuName = "TcgEngine/Condition/Alive")]
     public class ConditionAlive : ConditionData
     {
         [Header("Target is alive")]

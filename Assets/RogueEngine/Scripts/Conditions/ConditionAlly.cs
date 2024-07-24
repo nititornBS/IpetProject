@@ -8,7 +8,7 @@ namespace RogueEngine
     /// Condition that check the owner is in same team as target
     /// </summary>
     
-    [CreateAssetMenu(fileName = "condition", menuName = "TcgEngine/Condition/CardAlly", order = 10)]
+    [CreateAssetMenu(fileName = "condition", menuName = "TcgEngine/Condition/CardAlly")]
     public class ConditionAlly : ConditionData
     {
         [Header("Target is allied to caster")]

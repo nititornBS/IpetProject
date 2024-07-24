@@ -9,7 +9,7 @@ namespace RogueEngine
     /// Condition that checks if the character is at the back
     /// </summary>
 
-    [CreateAssetMenu(fileName = "condition", menuName = "TcgEngine/Condition/CharacterBack", order = 10)]
+    [CreateAssetMenu(fileName = "condition", menuName = "TcgEngine/Condition/CharacterBack")]
     public class ConditionCharacterBack : ConditionData
     {
         [Header("Character is at the back")]

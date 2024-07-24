@@ -8,7 +8,7 @@ namespace RogueEngine
     /// Condition that checks the card data matches
     /// </summary>
 
-    [CreateAssetMenu(fileName = "condition", menuName = "TcgEngine/Condition/CardData", order = 10)]
+    [CreateAssetMenu(fileName = "condition", menuName = "TcgEngine/Condition/CardData")]
     public class ConditionCardData : ConditionData
     {
         [Header("Card is")]

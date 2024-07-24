@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace RogueEngine
 {
-    [CreateAssetMenu(fileName = "behavior", menuName = "TcgEngine/Behaviors/Boss", order = 20)]
+    [CreateAssetMenu(fileName = "behavior", menuName = "TcgEngine/Behaviors/Boss")]
     public class BehaviorBoss : BehaviorData
     {
         public CardData summon_card;

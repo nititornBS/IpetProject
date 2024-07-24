@@ -36,7 +36,7 @@ public class Bird : Character_IPet
         Debug.Log("Jib! Jib!");
     }
 
-    public void FeedIpet()
+    public void EatFood()
     {
         SetHunger(GetHunger() + 5);
     }

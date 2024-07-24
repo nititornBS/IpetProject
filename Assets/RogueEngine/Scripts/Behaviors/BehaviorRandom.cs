@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RogueEngine
 {
-    [CreateAssetMenu(fileName = "behavior", menuName = "TcgEngine/Behaviors/Random", order = 20)]
+    [CreateAssetMenu(fileName = "behavior", menuName = "TcgEngine/Behaviors/Random")]
     public class BehaviorRandom : BehaviorData
     {
         public override Card SelectPlayCard(Battle data, BattleCharacter character, List<Card> cards, int turn)

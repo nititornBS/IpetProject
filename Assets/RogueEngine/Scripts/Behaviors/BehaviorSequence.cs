@@ -5,10 +5,10 @@ using UnityEngine;
 namespace RogueEngine
 {
     /// <summary>
-    /// Enemy with this behavior will always play all his cards in order: card 1, card 2, card 3, then back to card 1....
+    /// Enemy with this behavior will always play all his cards i 1, card 2, card 3, then back to card 1....
     /// </summary>
 
-    [CreateAssetMenu(fileName = "behavior", menuName = "TcgEngine/Behaviors/Sequence", order = 20)]
+    [CreateAssetMenu(fileName = "behavior", menuName = "TcgEngine/Behaviors/Sequence")]
     public class BehaviorSequence : BehaviorData
     {
         public override Card SelectPlayCard(Battle data, BattleCharacter character, List<Card> cards, int turn)

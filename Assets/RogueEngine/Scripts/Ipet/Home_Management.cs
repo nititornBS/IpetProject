@@ -96,7 +96,7 @@ public class Home_Management : MonoBehaviour
     {
         if (bird != null)
         {
-            bird.FeedIpet(); 
+            bird.EatFood(); 
             UpdateHungerDisplay();
         }
     }

@@ -8,7 +8,7 @@ namespace RogueEngine
     /// Condition that checks in which pile a card is (deck/discard/hand/board/secrets)
     /// </summary>
 
-    [CreateAssetMenu(fileName = "condition", menuName = "TcgEngine/Condition/CardPile", order = 10)]
+    [CreateAssetMenu(fileName = "condition", menuName = "TcgEngine/Condition/CardPile")]
     public class ConditionCardPile : ConditionData
     {
         [Header("Card is in pile")]
